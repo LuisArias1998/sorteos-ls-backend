@@ -30,7 +30,7 @@ route.post('/cliente', (req, res) => {
 
 route.post("/email-sender", async (req, res) => {
     let emailInfo = req.body
-
+    console.log('entered to sender');
     var transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
