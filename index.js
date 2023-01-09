@@ -11,7 +11,11 @@ var app = express();
 app.set('port', port)
 
 app.use(bodyParser.json())
-app.use(cors());
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.use(require('./route'))
 
 app.listen(app.get('port'), (error) => { if (error) { console.log('Error starting server'); } else { console.log('Server on port: ' + port); } })
