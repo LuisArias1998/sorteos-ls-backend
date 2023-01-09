@@ -15,3 +15,4 @@ app.use(cors());
 app.use(require('./route'))
 
 app.listen(app.get('port'), (error) => { if (error) { console.log('Error starting server'); } else { console.log('Server on port: ' + port); } })
+console.log('helos');
