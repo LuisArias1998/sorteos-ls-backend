@@ -41,7 +41,7 @@ route.post("/email-sender", async (req, res) => {
     })
     var mailOptions = {
         from: "Remittance",
-        to: "ariasmontoya_luis@hotmail.com",
+        to: "carlosgc98_gc@hotmail.com",
         subject: `Sorteos LS - Boleto #${emailInfo.id}`,
         attachments: [{
             filename: 'sorteos-ls-big.png',
