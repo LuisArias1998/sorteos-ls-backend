@@ -17,7 +17,7 @@ route.get('/', (req, res) => {
 route.post('/cliente', (req, res) => {
     const clienteInfo = req.body;
 
-    let sql = `insert into Clientes(id, nombre, apellidos, celular, estado, municipio_cd) values(${clienteInfo.id},'${clienteInfo.nombre}','${clienteInfo.apellidos}','${clienteInfo.celular}','${clienteInfo.municipio_cd}','${clienteInfo.estado}')`
+    let sql = `insert into Clientes(id, nombre, apellidos, celular, estado, municipio_cd) values(${clienteInfo.id},'${clienteInfo.nombre}','${clienteInfo.apellidos}','${clienteInfo.celular}','${clienteInfo.estado}','${clienteInfo.municipio_cd}')`
     connection.query(sql, (err, rows, fields) => {
         if (err) {
             throw err;
